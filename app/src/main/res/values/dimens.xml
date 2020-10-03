@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 마진 -->
+    <dimen name="margin_2">2dp</dimen>
+    <dimen name="margin_4">4dp</dimen>
+    <dimen name="margin_5">5dp</dimen>
+    <dimen name="margin_8">8dp</dimen>
+    <dimen name="margin_12">12dp</dimen>
+    <dimen name="margin_14">14dp</dimen>
+    <dimen name="margin_16">16dp</dimen>
+    <dimen name="margin_20">20dp</dimen>
+    <dimen name="margin_22">22dp</dimen>
+    <dimen name="margin_24">24dp</dimen>
+    <dimen name="margin_28">28dp</dimen>
+    <dimen name="margin_32">32dp</dimen>
+    <dimen name="margin_40">40dp</dimen>
+    <dimen name="margin_48">48dp</dimen>
+
+    <!-- 패딩 -->
+    <dimen name="padding_8">8dp</dimen>
+    <dimen name="padding_12">12dp</dimen>
+    <dimen name="padding_16">16dp</dimen>
+    <dimen name="padding_20">20dp</dimen>
+
+
+    <dimen name="margin_micro">4dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_normal">16dp</dimen>
+    <dimen name="margin_large">24dp</dimen>
+
+    <dimen name="rating_min_height">20dp</dimen>
+    <dimen name="rating_min_width">20dp</dimen>
+
+    <dimen name="input_button_width">48dp</dimen>
+    <dimen name="input_button_height">48dp</dimen>
+
+    <!-- 일기 -->
+    <dimen name="lottie_height">80dp</dimen>
+    <dimen name="lottie_width">80dp</dimen>
+
+    <!-- 부록 -->
+    <dimen name="category_navigator_height">56dp</dimen>
+    <dimen name="category_indicator_height">8dp</dimen>
+    <dimen name="category_indicator_width">8dp</dimen>
+    <dimen name="add_journal_toolbar_height">56dp</dimen>
+    <dimen name="category_toolbar_height">56dp</dimen>
+    <dimen name="book_image_width">84dp</dimen>
+    <dimen name="book_image_height">116dp</dimen>
+    <dimen name="category_divider_height">1dp</dimen>
+    <dimen name="category_tab_shadow_height">4dp</dimen>
+    <dimen name="main_tab_shadow_height">4dp</dimen>
+    <dimen name="movie_image_height">116dp</dimen>
+    <dimen name="movie_image_width">84dp</dimen>
+    <dimen name="setting_divider_height">1dp</dimen>
+    <dimen name="setting_discount_tape_height">7dp</dimen>
+    <dimen name="setting_cancel_line_height">1dp</dimen>
+    <dimen name="date_picker_element_height">128dp</dimen>
+    <dimen name="month_picker_year_width">64dp</dimen>
+    <dimen name="month_picker_month_width">56dp</dimen>
+    <dimen name="month_picker_month_height">48dp</dimen>
+    <dimen name="movie_title_line_height">2dp</dimen>
+    <dimen name="padding_4">4dp</dimen>
+    <dimen name="book_title_line_height">2dp</dimen>
+    <dimen name="margin_34">34dp</dimen>
+    <dimen name="calendar_day_of_week_height">48dp</dimen>
+    <dimen name="margin_56">56dp</dimen>
+    <dimen name="export_save_button_height">48dp</dimen>
+
+    <!-- 공통 텍스트 사이즈 -->
+    <dimen name="normal_text_size">17sp</dimen>
+    <dimen name="small_text_size">14sp</dimen>
+    <dimen name="micro_text_size">12sp</dimen>
+
+    <!-- 기타 텍스트 사이즈 -->
+    <dimen name="navigator_text_size">19sp</dimen>
+    <dimen name="tab_text_size">18sp</dimen>
+
+    <dimen name="calendar_year_text_size">13sp</dimen>
+    <dimen name="calendar_month_text_size">22sp</dimen>
+    <dimen name="calendar_dialog_text_size">16sp</dimen>
+
+    <dimen name="category_title_size">15sp</dimen>
+    <dimen name="password_keyboard_text_size">21sp</dimen>
+</resources>

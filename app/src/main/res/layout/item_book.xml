@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_20"
+    android:layout_marginBottom="@dimen/margin_8">
+
+    <ImageView
+        android:id="@+id/book_image_view"
+        android:layout_width="0dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="@dimen/margin_5"
+        android:layout_marginEnd="@dimen/margin_5"
+        android:background="@drawable/background_item_book_image"
+        android:scaleType="center"
+        app:srcCompat="@drawable/img_photo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/book_title_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_4"
+        android:layout_marginStart="@dimen/margin_4"
+        android:layout_marginEnd="@dimen/margin_4"
+        android:textSize="@dimen/category_title_size"
+        android:textColor="@color/text_basic"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintStart_toStartOf="@id/book_image_view"
+        app:layout_constraintEnd_toEndOf="@id/book_image_view"
+        app:layout_constraintTop_toBottomOf="@id/book_image_view"
+        tools:text="더 해빙 The Having : 부와 행운을 끌어당기는 힘"/>
+
+    <RatingBar
+        style="@style/RatingBar9"
+        android:id="@+id/book_rating_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_2"
+        android:stepSize="1"
+        android:isIndicator="true"
+        app:layout_constraintStart_toStartOf="@id/book_title_text_view"
+        app:layout_constraintTop_toBottomOf="@id/book_title_text_view"
+        tools:rating="4"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dialog_background"
+    android:id="@+id/month_picker_root_layout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/margin_20"
+        android:layout_marginEnd="@dimen/margin_20"
+        android:background="@drawable/background_dialog">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/month_picker_year_text"
+            android:layout_width="@dimen/month_picker_year_width"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_32"
+            android:textColor="@color/text_display"
+            android:textSize="@dimen/normal_text_size"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="2020년"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/month_picker_year_arrow_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_20"
+            app:layout_constraintEnd_toStartOf="@+id/month_picker_year_text"
+            app:layout_constraintTop_toTopOf="@+id/month_picker_year_text"
+            app:layout_constraintBottom_toBottomOf="@+id/month_picker_year_text"
+            android:src="@drawable/img_month_picker_left_arrow"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/month_picker_year_arrow_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_20"
+            app:layout_constraintStart_toEndOf="@+id/month_picker_year_text"
+            app:layout_constraintTop_toTopOf="@+id/month_picker_year_text"
+            app:layout_constraintBottom_toBottomOf="@+id/month_picker_year_text"
+            android:src="@drawable/img_month_picker_right_arrow"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/margin_12"
+            android:layout_marginBottom="@dimen/margin_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/month_picker_year_text">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:id="@+id/month_picker_january"
+                    android:layout_width="@dimen/month_picker_month_width"
+                    android:layout_height="@dimen/month_picker_month_height">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/calendar_january"
+                        android:textColor="@color/text_primary"
+                        android:fontFamily="@font/kyobo_handwriting"
+                        android:textSize="@dimen/calendar_dialog_text_size"
+                        android:layout_marginBottom="@dimen/margin_2"
+                        android:layout_gravity="center"/>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/month_picker_february"
+                    android:layout_width="@dimen/month_picker_month_width"
+                    android:layout_height="@dimen/month_picker_month_height">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/calendar_february"
+                        android:textColor="@color/text_primary"
+                        android:fontFamily="@font/kyobo_handwriting"
+                        android:textSize="@dimen/calendar_dialog_text_size"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/margin_2"/>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/month_picker_march"
+                    android:layout_width="@dimen/month_picker_month_width"
+                    android:layout_height="@dimen/month_picker_month_height">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/calendar_march"
+                        android:textColor="@color/text_primary"
+                        android:fontFamily="@font/kyobo_handwriting"
+                        android:textSize="@dimen/calendar_dialog_text_size"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/margin_2"/>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/month_picker_april"
+                    android:layout_width="@dimen/month_picker_month_width"
+                    android:layout_height="@dimen/month_picker_month_height">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/calendar_april"
+                        android:textColor="@color/text_primary"
+                        android:fontFamily="@font/kyobo_handwriting"
+                        android:textSize="@dimen/calendar_dialog_text_size"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/margin_2"/>
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <FrameLayout
+                    android:id="@+id/month_picker_may"
+                    android:layout_width="@dimen/month_picker_month_width"
+                    android:layout_height="@dimen/month_picker_month_height">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/calendar_may"
+                        android:textColor="@color/text_primary"
+                        android:fontFamily="@font/kyobo_handwriting"
+                        android:textSize="@dimen/calendar_dialog_text_size"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/margin_2"/>
+                </FrameLayout>
+
+
+                <FrameLayout
+                    android:id="@+id/month_picker_june"
+                    android:layout_width="@dimen/month_picker_month_width"
+                    android:layout_height="@dimen/month_picker_month_height">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/calendar_june"
+                        android:textColor="@color/text_primary"
+                        android:fontFamily="@font/kyobo_handwriting"
+                        android:textSize="@dimen/calendar_dialog_text_size"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/margin_2"/>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/month_picker_july"
+                    android:layout_width="@dimen/month_picker_month_width"
+                    android:layout_height="@dimen/month_picker_month_height">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/calendar_july"
+                        android:textColor="@color/text_primary"
+                        android:fontFamily="@font/kyobo_handwriting"
+                        android:textSize="@dimen/calendar_dialog_text_size"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/margin_2"/>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/month_picker_august"
+                    android:layout_width="@dimen/month_picker_month_width"
+                    android:layout_height="@dimen/month_picker_month_height">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/calendar_august"
+                        android:textColor="@color/text_primary"
+                        android:fontFamily="@font/kyobo_handwriting"
+                        android:textSize="@dimen/calendar_dialog_text_size"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/margin_2"/>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <FrameLayout
+                    android:id="@+id/month_picker_september"
+                    android:layout_width="@dimen/month_picker_month_width"
+                    android:layout_height="@dimen/month_picker_month_height">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/calendar_september"
+                        android:textColor="@color/text_primary"
+                        android:fontFamily="@font/kyobo_handwriting"
+                        android:textSize="@dimen/calendar_dialog_text_size"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/margin_2"/>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/month_picker_october"
+                    android:layout_width="@dimen/month_picker_month_width"
+                    android:layout_height="@dimen/month_picker_month_height">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/calendar_october"
+                        android:textColor="@color/text_primary"
+                        android:fontFamily="@font/kyobo_handwriting"
+                        android:textSize="@dimen/calendar_dialog_text_size"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/margin_2"/>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/month_picker_november"
+                    android:layout_width="@dimen/month_picker_month_width"
+                    android:layout_height="@dimen/month_picker_month_height">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/calendar_november"
+                        android:textColor="@color/text_primary"
+                        android:fontFamily="@font/kyobo_handwriting"
+                        android:textSize="@dimen/calendar_dialog_text_size"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/margin_2"/>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/month_picker_december"
+                    android:layout_width="@dimen/month_picker_month_width"
+                    android:layout_height="@dimen/month_picker_month_height">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/calendar_december"
+                        android:textColor="@color/text_primary"
+                        android:fontFamily="@font/kyobo_handwriting"
+                        android:textSize="@dimen/calendar_dialog_text_size"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/margin_2"/>
+
+                </FrameLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

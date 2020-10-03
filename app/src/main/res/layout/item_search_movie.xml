@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/search_movie_item_root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin_16">
+
+
+    <ImageView
+        android:id="@+id/search_movie_item_poster"
+        android:layout_width="0dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="@dimen/margin_5"
+        android:layout_marginEnd="@dimen/margin_5"
+        android:background="@drawable/background_item_movie_image"
+        android:scaleType="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/search_movie_item_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_4"
+        android:textColor="@color/text_basic"
+        android:textSize="@dimen/category_title_size"
+        android:maxLines="3"
+        app:layout_constraintStart_toStartOf="@id/search_movie_item_poster"
+        app:layout_constraintEnd_toEndOf="@+id/search_movie_item_poster"
+        app:layout_constraintTop_toBottomOf="@+id/search_movie_item_poster"
+        tools:text="제목"/>
+
+    <TextView
+        android:id="@+id/search_movie_item_year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_4"
+        android:textColor="@color/text_primary"
+        android:textSize="@dimen/micro_text_size"
+        app:layout_constraintStart_toStartOf="@+id/search_movie_item_title"
+        app:layout_constraintTop_toBottomOf="@+id/search_movie_item_title"
+        tools:text="2020"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

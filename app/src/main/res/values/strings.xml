@@ -1,0 +1,121 @@
+<resources>
+    <string name="app_name">해마</string>
+    <!-- 달력 -->
+    <string name="calendar_year">%d년</string>
+    <string name="calendar_month">%d월</string>
+
+    <string name="calendar_sunday">일</string>
+    <string name="calendar_monday">월</string>
+    <string name="calendar_tuesday">화</string>
+    <string name="calendar_wednesday">수</string>
+    <string name="calendar_thursday">목</string>
+    <string name="calendar_friday">금</string>
+    <string name="calendar_saturday">토</string>
+
+    <string name="calendar_january">1월</string>
+    <string name="calendar_february">2월</string>
+    <string name="calendar_march">3월</string>
+    <string name="calendar_april">4월</string>
+    <string name="calendar_may">5월</string>
+    <string name="calendar_june">6월</string>
+    <string name="calendar_july">7월</string>
+    <string name="calendar_august">8월</string>
+    <string name="calendar_september">9월</string>
+    <string name="calendar_october">10월</string>
+    <string name="calendar_november">11월</string>
+    <string name="calendar_december">12월</string>
+
+    <string name="tab_calendar">달력</string>
+    <string name="tab_journal">일기</string>
+    <string name="tab_movie">영화</string>
+    <string name="tab_book">책</string>
+
+    <!-- 일기 -->
+    <string name="write">작성</string>
+    <string name="done">완료</string>
+    <string name="select">선택</string>
+    <string name="close">닫기</string>
+    <string name="expand">펼치기</string>
+    <string name="edit">수정</string>
+    <string name="delete">삭제</string>
+    <string name="share">공유</string>
+    <string name="remain">계속 작성</string>
+    <string name="cancel">취소</string>
+    <string name="empty_journal">작성된 일기가 없어요.</string>
+    <string name="image_limit_alert">사진은 한 장만 추가할 수 있어요.\n여러 장 추가를 곧 업데이트할 예정이에요.</string>
+    <string name="add_journal_exit_alert_message">글쓰기를 그만 두시나요?\n작성한 글이 저장되지 않아요.</string>
+    <string name="delete_alert_message">정말 삭제하시나요?\n삭제된 글은 복원할 수 없어요.</string>
+    <string name="nanjoong">맑다\n새벽에 아우 여필과 조카 봉, 아들 회가 와서 이야기했다. 다만 어머니를 떠나 남쪽에서 두 번이나 설을 세니 간절한 회포를 이길 길이 없다. 병마사의 군관 이경신이 병마사의 편지와 설 선물과 장전과 편전 등 여러 가지 물건을 바치러 가지고왔다.</string>
+
+    <!-- 카테고리 -->
+    <string name="no_result_message">검색 결과가 없습니다.</string>
+    <string name="add_manually">+ 직접 추가</string>
+    <string name="network_error_message">인터넷 연결이 불안정해요.</string>
+    <string name="retry">다시 시도</string>
+
+    <!-- 책 -->
+    <string name="book_add_title_hint">책 제목</string>
+    <string name="book_add_author">저자:</string>
+    <string name="book_add_publisher">출판:</string>
+    <string name="book_empty">등록된 책이 없어요.</string>
+    <string name="book_search_hint">책 제목을 입력해 주세요</string>
+    <string name="book_review_hint_text">감상평을 남겨주세요.</string>
+    <string name="book_detail_author">저자</string>
+    <string name="book_detail_publisher">출판</string>
+
+    <!-- 영화 -->
+    <string name="movie_add_title_hint">영화 제목</string>
+    <string name="movie_release_year">%s년</string>
+    <string name="movie_add_release">개봉:</string>
+    <string name="movie_add_director">감독:</string>
+    <string name="movie_add_actor">배우:</string>
+    <string name="movie_search_hint">영화 제목을 입력해 주세요</string>
+    <string name="movie_add_review_hint">후기를 남겨주세요.</string>
+    <string name="movie_add_place_hint">어디서</string>
+    <string name="movie_add_people_hint">누구랑</string>
+    <string name="movie_add_skip">건너뛰기</string>
+    <string name="movie_detail_release">개봉</string>
+    <string name="movie_detail_director">감독</string>
+    <string name="movie_detail_actor">배우</string>
+
+    <!-- 설정 -->
+    <string name="setting">환경설정</string>
+    <string name="screen_lock">화면잠금</string>
+    <string name="export">pdf로 저장</string>
+    <string name="font">폰트</string>
+    <string name="back_up">백업</string>
+    <string name="instagram">인스타그램</string>
+
+    <!-- 비밀번호 -->
+    <string name="password_msg">비밀번호를 입력해 주세요.</string>
+    <string name="password_wrong_msg">비밀번호가 일치하지 않습니다.\n다시 입력해 주세요.</string>
+    <string name="password_new_msg">새 비밀번호를 입력해 주세요.</string>
+    <string name="password_confirm_msg">한번 더 입력해 주세요</string>
+    <string name="password_1">1</string>
+    <string name="password_2">2</string>
+    <string name="password_3">3</string>
+    <string name="password_4">4</string>
+    <string name="password_5">5</string>
+    <string name="password_6">6</string>
+    <string name="password_7">7</string>
+    <string name="password_8">8</string>
+    <string name="password_9">9</string>
+    <string name="password_0">0</string>
+
+    <!-- pdf로 저장-->
+    <string name="export_save">저장</string>
+    <string name="export_message">작성한 모든 일기를 PDF 파일로\n기기에 저장할 수 있어요.</string>
+    <string name="export_directory_message">저장위치: ../Download/해마</string>
+
+    <!-- 인스타그램 -->
+    <string name="instagram_app_url">http://instagram.com/_u/haema_app</string>
+    <string name="instgram_web_url">http://instagram.com/haema_app</string>
+
+    <!-- 이용권 구매 -->
+    <string name="free_trial_period">무료 사용기간이 %d일 남았어요</string>
+    <string name="setting_discount_msg">%d일 안에 구매 시 50%% 할인</string>
+    <string name="premium_description">이용권을 구매해주세요\n한 번만 결제하면 평생 이용</string>
+    <string name="original_price">\\ 4,900</string>
+    <string name="discount_price">\\ 2,400</string>
+    <string name="sku_id">app_purchase</string>
+</resources>

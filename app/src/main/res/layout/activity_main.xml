@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.main.MainActivity"
+    android:id="@+id/main_root_layout"
+    android:background="@color/main_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/main_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tab_calendar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_20"
+            android:padding="@dimen/margin_small"
+            android:text="@string/tab_calendar"
+            android:textSize="@dimen/tab_text_size"
+            android:textColor="@color/text_display"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/tab_journal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_20"
+            android:padding="@dimen/margin_small"
+            android:text="@string/tab_journal"
+            android:textSize="@dimen/tab_text_size"
+            android:textColor="@color/text_display"
+            app:layout_constraintStart_toEndOf="@id/tab_calendar"
+            app:layout_constraintTop_toTopOf="@+id/tab_calendar"
+            app:layout_constraintBottom_toBottomOf="@+id/tab_calendar"/>
+
+
+
+        <ImageView
+            android:id="@+id/navigate_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img_settings"
+            android:padding="@dimen/margin_8"
+            android:layout_marginEnd="@dimen/margin_20"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tab_calendar"
+            app:layout_constraintBottom_toBottomOf="@+id/tab_calendar"/>
+
+        <ImageView
+            android:id="@+id/navigate_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img_category"
+            android:padding="@dimen/padding_8"
+            android:layout_marginEnd="@dimen/margin_8"
+            app:layout_constraintEnd_toStartOf="@+id/navigate_setting"
+            app:layout_constraintTop_toTopOf="@+id/tab_calendar"
+            app:layout_constraintBottom_toBottomOf="@+id/tab_calendar"/>
+
+        <View
+            android:id="@+id/tab_shadow"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/main_tab_shadow_height"
+            android:layout_marginTop="@dimen/margin_4"
+            android:background="@drawable/background_tab_bar_shadow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tab_calendar" />
+
+        <ImageView
+            android:id="@+id/tab_indicator"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_4"
+            android:layout_marginEnd="@dimen/margin_4"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="@id/tab_calendar"
+            app:layout_constraintEnd_toEndOf="@id/tab_calendar"
+            app:layout_constraintTop_toTopOf="@id/tab_shadow"
+            app:layout_constraintBottom_toTopOf="@+id/tab_shadow"
+            app:srcCompat="@drawable/background_main_tab_indicator"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tab_layout"
+        app:layout_constraintVertical_bias="1.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>

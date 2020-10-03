@@ -1,0 +1,40 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/main_background</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:fontFamily">@font/font_kyobo_handwriting</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="RatingBarSmall" parent="android:Widget.DeviceDefault.Light.RatingBar.Indicator">
+        <item name="android:progressDrawable">@drawable/rating_bar</item>
+        <item name="android:minHeight">@dimen/rating_min_height</item>
+        <item name="android:maxHeight">@dimen/rating_min_width</item>
+    </style>
+
+    <style name="RatingBarMicro" parent="android:Widget.DeviceDefault.Light.RatingBar.Indicator">
+        <item name="android:progressDrawable">@drawable/rating_bar_small</item>
+        <item name="android:minHeight">10dp</item>
+        <item name="android:maxHeight">10dp</item>
+    </style>
+
+    <style name="RatingBar20" parent="android:Widget.DeviceDefault.Light.RatingBar.Indicator">
+        <item name="android:progressDrawable">@drawable/rating_bar_add</item>
+        <item name="android:minHeight">@dimen/rating_min_height</item>
+        <item name="android:maxHeight">@dimen/rating_min_width</item>
+    </style>
+
+    <style name="RatingBar9" parent="android:Widget.DeviceDefault.Light.RatingBar.Indicator">
+        <item name="android:progressDrawable">@drawable/rating_bar_search</item>
+        <item name="android:minHeight">9dp</item>
+        <item name="android:maxHeight">9dp</item>
+    </style>
+
+    <style name="RatingBar11" parent="android:Widget.DeviceDefault.Light.RatingBar.Indicator">
+        <item name="android:progressDrawable">@drawable/rating_bar_search</item>
+        <item name="android:minHeight">11dp</item>
+        <item name="android:maxHeight">11dp</item>
+    </style>
+</resources>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/category_root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background"
+    tools:context=".ui.category.CategoryActivity"
+    android:fitsSystemWindows="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/category_tab_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/category_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_12"
+            android:padding="@dimen/margin_8"
+            android:src="@drawable/img_navigation_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/category_tab_movie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:padding="@dimen/margin_8"
+            android:text="@string/tab_movie"
+            android:textSize="@dimen/tab_text_size"
+            android:textColor="@color/text_display"
+            app:layout_constraintBottom_toBottomOf="@+id/category_back_btn"
+            app:layout_constraintStart_toEndOf="@+id/category_back_btn"
+            app:layout_constraintTop_toTopOf="@+id/category_back_btn" />
+
+        <TextView
+            android:id="@+id/category_tab_book"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_20"
+            android:padding="@dimen/margin_8"
+            android:text="@string/tab_book"
+            android:textSize="@dimen/tab_text_size"
+            android:textColor="@color/text_display"
+            app:layout_constraintBottom_toBottomOf="@+id/category_tab_movie"
+            app:layout_constraintStart_toEndOf="@+id/category_tab_movie"
+            app:layout_constraintTop_toTopOf="@+id/category_tab_movie"
+            app:layout_constraintVertical_bias="0.6" />
+
+        <ImageView
+            android:id="@+id/category_add_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_12"
+            android:padding="@dimen/margin_8"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/img_add_movie_plus" />
+
+        <View
+            android:id="@+id/tab_shadow"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/category_tab_shadow_height"
+            android:background="@drawable/background_tab_bar_shadow"
+            android:layout_marginTop="@dimen/margin_4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/category_tab_movie" />
+
+        <ImageView
+            android:id="@+id/category_tab_indicator"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_4"
+            android:layout_marginEnd="@dimen/margin_4"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="@id/category_tab_movie"
+            app:layout_constraintEnd_toEndOf="@id/category_tab_movie"
+            app:layout_constraintTop_toTopOf="@id/tab_shadow"
+            app:layout_constraintBottom_toTopOf="@+id/tab_shadow"
+            app:srcCompat="@drawable/background_main_tab_indicator"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/category_view_pager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/category_tab_layout" />
+</androidx.constraintlayout.widget.ConstraintLayout>

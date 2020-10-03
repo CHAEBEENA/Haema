@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/edit_book_root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background"
+    tools:context=".ui.category.book.edit.EditBookActivity">
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/edit_book_view_pager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/edit_book_navigator"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/edit_book_navigator"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/category_navigator_height"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/edit_book_previous_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_20"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:srcCompat="@drawable/img_back_black"/>
+
+        <View
+            android:id="@+id/page_indicator1"
+            android:layout_width="@dimen/category_indicator_width"
+            android:layout_height="@dimen/category_indicator_height"
+            android:layout_marginEnd="@dimen/margin_8"
+            android:background="@drawable/background_category_pager_indicator"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <View
+            android:id="@+id/page_indicator2"
+            android:layout_width="@dimen/category_indicator_width"
+            android:layout_height="@dimen/category_indicator_height"
+            android:layout_marginStart="@dimen/margin_8"
+            android:background="@drawable/background_category_pager_indicator"
+            app:layout_constraintStart_toEndOf="@id/page_indicator1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <ImageView
+            android:id="@+id/edit_book_next_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_20"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:srcCompat="@drawable/img_category_next_page"/>
+
+        <TextView
+            android:id="@+id/edit_book_done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_20"
+            android:visibility="gone"
+            android:text="@string/done"
+            android:textSize="@dimen/navigator_text_size"
+            android:textColor="@color/text_hint_disable"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/movie_detail_root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background"
+    tools:context=".ui.category.movie.detail.MovieDetailActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/movie_detail_toolbar"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/category_toolbar_height"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/movie_detail_navigate_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_12"
+            android:padding="@dimen/padding_8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:srcCompat="@drawable/img_navigation_back"/>
+
+        <ImageView
+            android:id="@+id/movie_detail_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_12"
+            android:padding="@dimen/padding_8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:srcCompat="@drawable/img_category_share"/>
+
+        <ImageView
+            android:id="@+id/movie_detail_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_12"
+            android:padding="@dimen/padding_8"
+            app:layout_constraintEnd_toStartOf="@id/movie_detail_share"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:srcCompat="@drawable/img_category_delete"/>
+
+        <ImageView
+            android:id="@+id/movie_detail_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_12"
+            android:padding="@dimen/padding_8"
+            app:layout_constraintEnd_toStartOf="@id/movie_detail_delete"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:srcCompat="@drawable/img_category_edit"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:id="@+id/movie_detail_contents_scroll_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:overScrollMode="never"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/movie_detail_toolbar"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/movie_detail_review_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/padding_20">
+
+                <com.marchlab.haema.widget.HaemaFrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:layout_marginStart="@dimen/margin_20"
+                    android:layout_marginEnd="@dimen/margin_20"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@id/movie_detail_margin"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/movie_detail_info_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_48"
+                    android:layout_marginEnd="@dimen/margin_20"
+                    android:layout_marginTop="@dimen/margin_20"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/movie_detail_image_shadow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/img_movie_shadow"
+                        app:layout_constraintStart_toStartOf="@+id/movie_detail_image_view"
+                        app:layout_constraintEnd_toEndOf="@+id/movie_detail_image_view"
+                        app:layout_constraintTop_toTopOf="@+id/movie_detail_image_view"
+                        app:layout_constraintBottom_toBottomOf="@+id/movie_detail_image_view"/>
+
+                    <ImageView
+                        android:id="@+id/movie_detail_image_view"
+                        android:layout_width="@dimen/movie_image_width"
+                        android:layout_height="@dimen/movie_image_height"
+                        android:layout_marginTop="@dimen/margin_28"
+                        android:layout_marginEnd="@dimen/margin_28"
+                        android:background="@color/main_background_dark"
+                        android:scaleType="center"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/img_photo"/>
+
+                    <ImageView
+                        android:id="@+id/movie_detail_image_tape"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="@id/movie_detail_image_view"
+                        app:layout_constraintEnd_toEndOf="@+id/movie_detail_image_view"
+                        app:layout_constraintTop_toTopOf="@+id/movie_detail_image_view"
+                        app:layout_constraintBottom_toTopOf="@+id/movie_detail_image_view"
+                        app:srcCompat="@drawable/img_masking_tape_beige"/>
+
+                    <TextView
+                        android:id="@+id/movie_detail_title_text_view"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/margin_28"
+                        android:layout_marginTop="@dimen/margin_28"
+                        android:textSize="@dimen/normal_text_size"
+                        android:textColor="@color/text_basic"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/movie_detail_image_view"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="빌리엘리어트"/>
+
+                    <RatingBar
+                        style="@style/RatingBar11"
+                        android:id="@+id/movie_detail_rating_bar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_4"
+                        android:isIndicator="true"
+                        app:layout_constraintStart_toStartOf="@id/movie_detail_title_text_view"
+                        app:layout_constraintTop_toBottomOf="@id/movie_detail_title_text_view"
+                        tools:rating="4"/>
+
+                    <View
+                        android:id="@+id/movie_detail_margin_view"
+                        android:layout_width="1dp"
+                        android:layout_height="@dimen/margin_16"
+                        app:layout_constraintStart_toStartOf="@id/movie_detail_rating_bar"
+                        app:layout_constraintTop_toBottomOf="@id/movie_detail_rating_bar"/>
+
+                    <TextView
+                        android:id="@+id/movie_detail_release"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/movie_detail_release"
+                        android:textColor="@color/text_primary"
+                        android:textSize="@dimen/small_text_size"
+                        app:layout_constraintStart_toStartOf="@id/movie_detail_rating_bar"
+                        app:layout_constraintTop_toBottomOf="@id/movie_detail_margin_view"/>
+
+                    <TextView
+                        android:id="@+id/movie_detail_release_text_view"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8"
+                        android:layout_marginEnd="@dimen/margin_28"
+                        android:textColor="@color/text_primary"
+                        android:textSize="@dimen/small_text_size"
+                        app:layout_constraintStart_toEndOf="@id/movie_detail_release"
+                        app:layout_constraintEnd_toStartOf="@+id/movie_detail_image_view"
+                        app:layout_constraintTop_toTopOf="@id/movie_detail_release"
+                        tools:text="2020"/>
+
+                    <TextView
+                        android:id="@+id/movie_detail_director"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_4"
+                        android:text="@string/movie_detail_director"
+                        android:textColor="@color/text_primary"
+                        android:textSize="@dimen/small_text_size"
+                        app:layout_constraintStart_toStartOf="@id/movie_detail_release"
+                        app:layout_constraintTop_toBottomOf="@+id/movie_detail_release_text_view" />
+
+                    <TextView
+                        android:id="@+id/movie_detail_director_text_view"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8"
+                        android:layout_marginEnd="@dimen/margin_28"
+                        android:textColor="@color/text_primary"
+                        android:textSize="@dimen/small_text_size"
+                        app:layout_constraintStart_toEndOf="@id/movie_detail_director"
+                        app:layout_constraintEnd_toStartOf="@+id/movie_detail_image_view"
+                        app:layout_constraintTop_toTopOf="@id/movie_detail_director"
+                        tools:text="스티븐 달드리"/>
+
+                    <TextView
+                        android:id="@+id/movie_detail_actor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_4"
+                        android:text="@string/movie_detail_actor"
+                        android:textColor="@color/text_primary"
+                        android:textSize="@dimen/small_text_size"
+                        app:layout_constraintStart_toStartOf="@id/movie_detail_director"
+                        app:layout_constraintTop_toBottomOf="@+id/movie_detail_director_text_view" />
+
+                    <TextView
+                        android:id="@+id/movie_detail_actor_text_view"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8"
+                        android:layout_marginEnd="@dimen/margin_28"
+                        android:textColor="@color/text_primary"
+                        android:textSize="@dimen/small_text_size"
+                        app:layout_constraintStart_toEndOf="@id/movie_detail_actor"
+                        app:layout_constraintEnd_toStartOf="@id/movie_detail_image_view"
+                        app:layout_constraintTop_toTopOf="@id/movie_detail_actor"
+                        tools:text="제이미 벨, 줄리 윌터스, 게리 루이스"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:id="@+id/movie_detail_divider"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/category_divider_height"
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:layout_marginEnd="@dimen/margin_20"
+                    android:background="@color/main_background_dark"
+                    app:layout_constraintStart_toStartOf="@+id/movie_detail_info_layout"
+                    app:layout_constraintEnd_toEndOf="@+id/movie_detail_info_layout"
+                    app:layout_constraintTop_toBottomOf="@+id/movie_detail_info_layout"/>
+
+                <TextView
+                    android:id="@+id/movie_detail_date_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_48"
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:textSize="@dimen/normal_text_size"
+                    android:textColor="@color/text_basic"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/movie_detail_divider"
+                    tools:text="2020년 3월 26일 목요일"/>
+
+                <ImageView
+                    android:id="@+id/movie_detail_place"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_48"
+                    android:layout_marginTop="@dimen/margin_16"
+                    app:srcCompat="@drawable/img_movie_place"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/movie_detail_date_text_view"/>
+
+                <TextView
+                    android:id="@+id/movie_detail_place_text_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_8"
+                    android:layout_marginEnd="@dimen/margin_48"
+                    android:textSize="@dimen/normal_text_size"
+                    android:textColor="@color/text_basic"
+                    app:layout_constraintStart_toEndOf="@+id/movie_detail_place"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/movie_detail_place"
+                    app:layout_constraintBottom_toBottomOf="@+id/movie_detail_place"
+                    tools:text="왕십리 CGV"/>
+
+                <ImageView
+                    android:id="@+id/movie_detail_people"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:layout_marginStart="@dimen/margin_48"
+                    app:srcCompat="@drawable/img_movie_people"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/movie_detail_place"/>
+
+                <TextView
+                    android:id="@+id/movie_detail_people_text_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_8"
+                    android:textSize="@dimen/normal_text_size"
+                    android:textColor="@color/text_basic"
+                    app:layout_constraintStart_toEndOf="@+id/movie_detail_people"
+                    app:layout_constraintEnd_toEndOf="@id/movie_detail_place_text_view"
+                    app:layout_constraintTop_toTopOf="@+id/movie_detail_people"
+                    app:layout_constraintBottom_toBottomOf="@+id/movie_detail_people"
+                    tools:text="채빈 홍주 지원"/>
+
+                <TextView
+                    android:id="@+id/movie_detail_review_text_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_48"
+                    android:layout_marginEnd="@dimen/margin_48"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:textSize="@dimen/normal_text_size"
+                    android:textColor="@color/text_basic"
+                    android:lineSpacingExtra="9sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/movie_detail_people_text_view"
+                    tools:text="삶은 여전히 힘들 것이고, 모든 문제가 해소된 듯한 마지막의 감동이 현실을 미화시키고 있다는 느낌이 들기도 한다. 그러나 빌리의 아버지와 형은 적어도 빌리가 날아오르던 그 순간 만큼은 세상 그 누구도 부럽지 않았을 것이다. 그들의 희생이 보답받는 감동의 순간이다."/>
+            <View
+                android:id="@+id/movie_detail_margin"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/margin_28"
+                app:layout_constraintTop_toBottomOf="@+id/movie_detail_review_text_view"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/share_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#99000000"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/share_image_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"/>
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

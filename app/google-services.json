@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "773701702189",
+    "firebase_url": "https://haema-98e9b.firebaseio.com",
+    "project_id": "haema-98e9b",
+    "storage_bucket": "haema-98e9b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:773701702189:android:8091b3aceaa6d125799ea4",
+        "android_client_info": {
+          "package_name": "com.marchlab.haema"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "773701702189-762lsdlcj59pqof4ndtj7csj1ivgqvgf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.marchlab.haema",
+            "certificate_hash": "b5e3c97374310447ed852da35dc973d2130a4ef2"
+          }
+        },
+        {
+          "client_id": "773701702189-tfd3t1pufkis32roisepajhdheo3qbq8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhKEPlERbQsoJdPNKBqpb6zngOR4ifipA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "773701702189-tfd3t1pufkis32roisepajhdheo3qbq8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
